@@ -1,0 +1,49 @@
+{
+    "tests": [
+        {
+            "name": "smartphone-portrait",
+            "url": "www.7digital.com",
+            "selector": "body",
+            "viewport": {
+                "width": 320,
+                "height": 480
+            }
+        },
+        {
+            "name": "smartphone-landscape",
+            "url": "www.7digital.com",
+            "selector": "body",
+            "viewport": {
+                "width": 480,
+                "height": 320
+            }
+        },
+        {
+            "name": "tablet-portrait",
+            "url": "www.7digital.com",
+            "selector": "body",
+            "viewport": {
+                "width": 768,
+                "height": 1024
+            }
+        },
+        {
+            "name": "tablet-landscape",
+            "url": "www.7digital.com",
+            "selector": "body",
+            "viewport": {
+                "width": 1024,
+                "height": 768
+            }
+        },
+        {
+            "name": "desktop-standard",
+            "url": "www.7digital.com",
+            "selector": "body",
+            "viewport": {
+                "width": 1280,
+                "height": 1024
+            }
+        }
+    ]
+}

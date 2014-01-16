@@ -1,0 +1,11 @@
+{
+  "name": "visual-regression-test",
+  "version": "0.0.1",
+  "description": "Project to perform visual regression tests using PhantomCSS",  
+  "repository": "https://github.com/Matt-B/visual-regression-test.git",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "phantomjs": "~1.9.2-6",
+    "grunt-phantomcss": "~0.2.0"
+  }
+}
