@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     phantomcss: {
       options: {},
-      your_target: {
+      run_tests: {
         options: {
           screenshots: 'test/visual/screenshots/',
           results: 'results/visual/'
