@@ -7,6 +7,6 @@
   	"grunt-cli": "0.1.11",
     "grunt": "~0.4.2",
     "phantomjs": "~1.9.2-6",
-    "grunt-phantomcss": "lazd/grunt-phantomcss"
+    "grunt-phantomcss": "0.2.1"
   }
 }
