@@ -2,7 +2,7 @@
     "tests": [
         {
             "name": "smartphone-portrait",
-            "url": "http://www.7digital.com/reboot/",
+            "url": "http://www.7digital.com/beta/on",
             "selector": "body",
             "viewport": {
                 "width": 320,
@@ -11,7 +11,7 @@
         },
         {
             "name": "smartphone-landscape",
-            "url": "http://www.7digital.com/reboot/",
+            "url": "http://www.7digital.com/beta/on",
             "selector": "body",
             "viewport": {
                 "width": 480,
@@ -20,7 +20,7 @@
         },
         {
             "name": "tablet-portrait",
-            "url": "http://www.7digital.com/reboot/",
+            "url": "http://www.7digital.com/beta/on",
             "selector": "body",
             "viewport": {
                 "width": 768,
@@ -29,7 +29,7 @@
         },
         {
             "name": "tablet-landscape",
-            "url": "http://www.7digital.com/reboot/",
+            "url": "http://www.7digital.com/beta/on",
             "selector": "body",
             "viewport": {
                 "width": 1024,
@@ -38,7 +38,7 @@
         },
         {
             "name": "desktop-standard",
-            "url": "http://www.7digital.com/reboot/",
+            "url": "http://www.7digital.com/beta/on",
             "selector": "body",
             "viewport": {
                 "width": 1280,
