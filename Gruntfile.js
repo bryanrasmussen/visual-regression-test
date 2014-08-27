@@ -5,6 +5,7 @@ module.exports = function(grunt) {
       options: {},
       run_tests: {
         options: {
+          mismatchTolerance: 0.1,
           screenshots: 'test/visual/screenshots/',
           results: 'results/visual/'
         },
