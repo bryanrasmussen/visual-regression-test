@@ -1,0 +1,32 @@
+[
+	{
+		"name": "smartphone-portrait",
+		"url": "https://localhost:3000",
+		"selector": "body",
+		"viewport": [320, 480]
+	},
+	{
+		"name": "smartphone-landscape",
+		"url": "https://localhost:3000",
+		"selector": "body",
+		"viewport": [480, 320]
+	},
+	{
+		"name": "tablet-portrait",
+		"url": "https://localhost:3000",
+		"selector": "body",
+		"viewport": [768, 1024]
+	},
+	{
+		"name": "tablet-landscape",
+		"url": "https://localhost:3000",
+		"selector": "body",
+		"viewport": [1024, 768]
+	},
+	{
+		"name": "desktop-standard",
+		"url": "https://localhost:3000",
+		"selector": "body",
+		"viewport": [1280, 1024]
+	}
+]

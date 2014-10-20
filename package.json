@@ -1,12 +1,11 @@
 {
   "name": "visual-regression-test",
   "version": "0.0.1",
-  "description": "Project to perform visual regression tests using PhantomCSS",  
+  "description": "Project to perform visual regression tests using PhantomCSS",
   "repository": "https://github.com/Matt-B/visual-regression-test.git",
-  "devDependencies": {
-  	"grunt-cli": "0.1.11",
-    "grunt": "~0.4.2",
-    "phantomjs": "~1.9.2-6",
-    "grunt-phantomcss": "LateRoomsGroup/grunt-phantomcss"
+  "NOTE": "phantomcss is not installed through its npm package because it seems to be missing the lib directory",
+  "dependencies": {
+    "phantomcss": "^0.8.0",
+    "util": "^0.10.3"
   }
 }
