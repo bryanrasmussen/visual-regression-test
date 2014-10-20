@@ -16,6 +16,7 @@ var cmd = spawn(command, args, {
 });
 cmd.stdout.pipe(process.stdout);
 cmd.stderr.pipe(process.stderr);
-cmd.on('close', function (code) {
-	console.log('Exit code: ' + code);
+cmd.on('exit', function (code) {
+	console.log('CasperJS exited with code ' + code);
+	process.exit(code);
 });
