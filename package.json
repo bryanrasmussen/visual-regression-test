@@ -5,6 +5,7 @@
   "repository": "https://github.com/Matt-B/visual-regression-test.git",
   "NOTE": "phantomcss is not installed through its npm package because it seems to be missing the lib directory",
   "dependencies": {
-    "phantomcss": "^0.8.0"
+    "phantomcss": "^0.8.0",
+    "util": "^0.10.3"
   }
 }
