@@ -24,6 +24,7 @@ casper.start().each(tests, function testScenario(casper, test) {
 	this.thenOpen(test.url, function checkStatusAndWait(res) {
 		if (res.status !== 200) {
 			this.die('Expected 200 status code, got ' + res.status);
+			this.exit(1);
 		}
 		this.wait(5000);
 	});
