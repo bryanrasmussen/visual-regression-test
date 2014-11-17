@@ -15,6 +15,33 @@
 	"pages": {
 		"home": {
 			"path": "/"
+		},
+		"artist": {
+			"path": "/artist/keane"
+		},
+		"release": {
+			"path": "/artist/keane/release/perfect-symmetry-1"
+		},
+		"charts": {
+			"path": "/charts"
+		},
+		"search": {
+			"path": "/search?q=three-pages-of-results"
+		},
+		"search-release": {
+			"path": "/search/release?q=three-pages-of-results"
+		},
+		"search-artist": {
+			"path": "/search/artist?q=three-pages-of-results"
+		},
+		"search-track": {
+			"path": "/search/track?q=three-pages-of-results"
+		},
+		"genres": {
+			"path": "/genre"
+		},
+		"genre": {
+			"path": "/genre/pop"
 		}
 	}
 }
