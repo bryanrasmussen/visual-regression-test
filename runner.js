@@ -27,7 +27,8 @@ function checkStatusAndWait(res) {
 		this.die('Expected 200 status code, got ' + res.status);
 		this.exit(1);
 	}
-	this.wait(5000);
+	// Pseudo-readyness-check
+	this.waitWhileSelector('.jplayer-stub');
 }
 
 phantomcss.init({
