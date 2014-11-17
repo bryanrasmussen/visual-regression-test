@@ -1,32 +1,20 @@
-[
-	{
-		"name": "smartphone-portrait",
-		"url": "https://www.7digital.local",
-		"selector": "body",
-		"viewport": [320, 480]
+{
+	"host": "https://www.7digital.local",
+	"cookies": [{
+		"name": "7digital_beta",
+		"value": "true"
+	}],
+	"selector": "body",
+	"viewports": {
+		"smartphone-portrait": [320, 480],
+		"smartphone-landscape": [480, 320],
+		"tablet-portrait": [768, 1024],
+		"tablet-landscape": [1024, 768],
+		"desktop-standard": [1280, 1024]
 	},
-	{
-		"name": "smartphone-landscape",
-		"url": "https://www.7digital.local",
-		"selector": "body",
-		"viewport": [480, 320]
-	},
-	{
-		"name": "tablet-portrait",
-		"url": "https://www.7digital.local",
-		"selector": "body",
-		"viewport": [768, 1024]
-	},
-	{
-		"name": "tablet-landscape",
-		"url": "https://www.7digital.local",
-		"selector": "body",
-		"viewport": [1024, 768]
-	},
-	{
-		"name": "desktop-standard",
-		"url": "https://www.7digital.local",
-		"selector": "body",
-		"viewport": [1280, 1024]
+	"pages": {
+		"home": {
+			"path": "/"
+		}
 	}
-]
+}

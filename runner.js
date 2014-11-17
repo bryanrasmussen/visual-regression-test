@@ -1,8 +1,10 @@
-var tests = require('./test-config');
+var config = require('./test-config');
 var phantomcss = require('phantomcss');
 var util = require('util');
 var url = require('url');
-var globalCookies = require('./cookies');
+var pageNames = Object.keys(config.pages);
+var viewportNames = Object.keys(config.viewports);
+var cookieDomain = url.parse(config.host).hostname;
 
 function log() {
 	var args = arguments;
@@ -11,13 +13,21 @@ function log() {
 	};
 }
 
-function setCookies(cookies, domain) {
+function setCookies(cookies) {
 	if (cookies) {
 		cookies.forEach(function setCookieWithDomain(cookie) {
-			cookie.domain = domain;
+			cookie.domain = cookieDomain;
 			phantom.addCookie(cookie);
 		});
 	}
+}
+
+function checkStatusAndWait(res) {
+	if (res.status !== 200) {
+		this.die('Expected 200 status code, got ' + res.status);
+		this.exit(1);
+	}
+	this.wait(5000);
 }
 
 phantomcss.init({
@@ -27,27 +37,26 @@ phantomcss.init({
 	libraryRoot: './node_modules/phantomcss'
 });
 
-casper.start().each(tests, function testScenario(casper, test) {
+casper.start().each(pageNames, function testPage(casper, pageName) {
+	var page = config.pages[pageName];
 	this.then(function () {
-		var domain = url.parse(test.url).hostname;
 		phantom.clearCookies();
-		setCookies(globalCookies, domain);
-		setCookies(test.cookies, domain);
+		setCookies(config.cookies);
+		setCookies(page.cookies);
 	});
-	this.then(function setViewport() {
-		this.viewport.apply(this, test.viewport);
-	});
-	this.then(log('Opening %s on viewport %j', test.url, test.viewport));
-	this.thenOpen(test.url, function checkStatusAndWait(res) {
-		if (res.status !== 200) {
-			this.die('Expected 200 status code, got ' + res.status);
-			this.exit(1);
-		}
-		this.wait(5000);
-	});
-	this.then(log('Capturing screenshot'));
-	this.then(function captureScreenshot(){
-		phantomcss.screenshot(test.selector, test.name);
+	this.each(viewportNames, function testViewport(casper, viewportName) {
+		var url = config.host + page.path;
+		var vp = config.viewports[viewportName];
+		this.then(function setViewport() {
+			this.viewport.apply(this, vp);
+		});
+		this.then(log('Opening %s on viewport %j', url, vp));
+		this.thenOpen(url, checkStatusAndWait);
+		this.then(log('Capturing screenshot'));
+		this.then(function captureScreenshot(){
+			var fileName = pageName + '-' + viewportName;
+			phantomcss.screenshot(config.selector, fileName);
+		});
 	});
 });
 
@@ -55,9 +64,9 @@ casper.then(function diffScreenshots() {
 	phantomcss.compareAll();
 });
 
-casper.then(function () {
-	// This has to be a separate 'then' because compareAll calls 'then' and it
-	// needs to happen before this
+casper.then(function byeBye() {
+	// Separate 'then' because compareAll makes its own calls to 'then' and
+	// this must come after
 	this.test.done();
 });
 
