@@ -1,31 +1,31 @@
 [
 	{
 		"name": "smartphone-portrait",
-		"url": "https://www.7digital.local/beta/on",
+		"url": "https://www.7digital.local",
 		"selector": "body",
 		"viewport": [320, 480]
 	},
 	{
 		"name": "smartphone-landscape",
-		"url": "https://www.7digital.local/beta/on",
+		"url": "https://www.7digital.local",
 		"selector": "body",
 		"viewport": [480, 320]
 	},
 	{
 		"name": "tablet-portrait",
-		"url": "https://www.7digital.local/beta/on",
+		"url": "https://www.7digital.local",
 		"selector": "body",
 		"viewport": [768, 1024]
 	},
 	{
 		"name": "tablet-landscape",
-		"url": "https://www.7digital.local/beta/on",
+		"url": "https://www.7digital.local",
 		"selector": "body",
 		"viewport": [1024, 768]
 	},
 	{
 		"name": "desktop-standard",
-		"url": "https://www.7digital.local/beta/on",
+		"url": "https://www.7digital.local",
 		"selector": "body",
 		"viewport": [1280, 1024]
 	}

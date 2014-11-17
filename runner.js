@@ -1,13 +1,8 @@
 var tests = require('./test-config');
 var phantomcss = require('phantomcss');
 var util = require('util');
-
-phantomcss.init({
-	screenshotRoot: './screenshots',
-	failedComparisonsRoot: './failures',
-	mismatchTolerance: 0.1,
-	libraryRoot: './node_modules/phantomcss'
-});
+var url = require('url');
+var globalCookies = require('./cookies');
 
 function log() {
 	var args = arguments;
@@ -16,7 +11,29 @@ function log() {
 	};
 }
 
+function setCookies(cookies, domain) {
+	if (cookies) {
+		cookies.forEach(function setCookieWithDomain(cookie) {
+			cookie.domain = domain;
+			phantom.addCookie(cookie);
+		});
+	}
+}
+
+phantomcss.init({
+	screenshotRoot: './screenshots',
+	failedComparisonsRoot: './failures',
+	mismatchTolerance: 0.1,
+	libraryRoot: './node_modules/phantomcss'
+});
+
 casper.start().each(tests, function testScenario(casper, test) {
+	this.then(function () {
+		var domain = url.parse(test.url).hostname;
+		phantom.clearCookies();
+		setCookies(globalCookies, domain);
+		setCookies(test.cookies, domain);
+	});
 	this.then(function setViewport() {
 		this.viewport.apply(this, test.viewport);
 	});
