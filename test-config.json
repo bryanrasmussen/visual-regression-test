@@ -40,16 +40,40 @@
 			"path": "/genre/pop"
 		},
 		"feature-interview": {
-			"path": "/features/VFuGfygAACcA-uY6/honeyblood"
+			"path": "/features/VFuGfygAACcA-uY6/honeyblood",
+			"headers": {
+				"x-7d-prismic-ref": "VNC_ficAAN9mcDY3"
+			}
 		},
 		"feature-best-of": {
-			"path": "/features/VFOr4ygAACcA6zaV/best-of-2014"
+			"path": "/features/VFOr4ygAACcA6zaV/best-of-2014",
+			"headers": {
+				"x-7d-prismic-ref": "VNC_ficAAN9mcDY3"
+			}
 		},
 		"feature-merch-list": {
-			"path": "/features/VGoRZCcAACgAWSXh/hi-res-flac"
+			"path": "/features/VGoRZCcAACgAWSXh/hi-res-flac",
+			"headers": {
+				"x-7d-prismic-ref": "VNC_ficAAN9mcDY3"
+			}
 		},
 		"feature-ones-to-watch": {
-			"path": "/features/VJLvkigAACkA24Z2/ones-to-watch-2015"
+			"path": "/features/VJLvkigAACkA24Z2/ones-to-watch-2015",
+			"headers": {
+				"x-7d-prismic-ref": "VNC_ficAAN9mcDY3"
+			}
+		},
+		"feature-awards-prize": {
+			"path": "/features/VL0ktiUAACYACBKu/mercury",
+			"headers": {
+				"x-7d-prismic-ref": "VNC_ficAAN9mcDY3"
+			}
+		},
+		"feature-awards-award": {
+			"path": "/features/VNCyqicAAIBlcB0Z/brits",
+			"headers": {
+				"x-7d-prismic-ref": "VNC_ficAAN9mcDY3"
+			}
 		}
 	}
 }
