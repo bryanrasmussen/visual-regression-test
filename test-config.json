@@ -1,9 +1,5 @@
 {
 	"host": "https://www.7digital.local",
-	"cookies": [{
-		"name": "7digital_beta",
-		"value": "true"
-	}],
 	"selector": "body",
 	"viewports": {
 		"smartphone-portrait": [320, 480],
