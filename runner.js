@@ -13,6 +13,18 @@ function log() {
 	};
 }
 
+function getHeaders(config, page) {
+	var headers = (config.headers)? config.headers : {};
+
+	if (page.headers) {
+		for (var attr in page.headers) {
+			headers[attr] = page.headers[attr];
+		}
+	}
+
+	return headers;
+}
+
 function setCookies(cookies) {
 	if (cookies) {
 		cookies.forEach(function setCookieWithDomain(cookie) {
@@ -46,13 +58,16 @@ casper.start().each(pageNames, function testPage(casper, pageName) {
 		setCookies(page.cookies);
 	});
 	this.each(viewportNames, function testViewport(casper, viewportName) {
+		headers = getHeaders(config, page);
 		var url = config.host + page.path;
 		var vp = config.viewports[viewportName];
 		this.then(function setViewport() {
 			this.viewport.apply(this, vp);
 		});
 		this.then(log('Opening %s on viewport %j', url, vp));
-		this.thenOpen(url, checkStatusAndWait);
+		this.thenOpen(url, {
+			headers: headers
+		}, checkStatusAndWait);
 		this.then(log('Capturing screenshot'));
 		this.then(function captureScreenshot(){
 			var fileName = pageName + '-' + viewportName;
