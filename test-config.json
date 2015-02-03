@@ -42,6 +42,18 @@
 		},
 		"genre": {
 			"path": "/genre/pop"
+		},
+		"feature-interview": {
+			"path": "/features/VFuGfygAACcA-uY6/honeyblood"
+		},
+		"feature-best-of": {
+			"path": "/features/VFOr4ygAACcA6zaV/best-of-2014"
+		},
+		"feature-merch-list": {
+			"path": "/features/VGoRZCcAACgAWSXh/hi-res-flac"
+		},
+		"feature-ones-to-watch": {
+			"path": "/features/VJLvkigAACkA24Z2/ones-to-watch-2015"
 		}
 	}
 }
