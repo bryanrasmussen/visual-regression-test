@@ -1,5 +1,5 @@
 {
-	"host": "https://www.7digital.local",
+	"host": "https://www.7digital.local:3000",
 	"selector": "body",
 	"viewports": {
 		"smartphone-portrait": [320, 480],
