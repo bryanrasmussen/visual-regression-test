@@ -36,8 +36,7 @@ function setCookies(cookies) {
 
 function checkStatusAndWait(res) {
 	if (res.status !== 200) {
-		this.die('Expected 200 status code, got ' + res.status);
-		this.exit(1);
+		this.die('Expected 200 status code, got ' + res.status, 1);
 	}
 	// Pseudo-readyness-check
 	this.waitWhileSelector('.jplayer-stub');
