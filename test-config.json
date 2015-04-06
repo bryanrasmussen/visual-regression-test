@@ -1,5 +1,5 @@
 {
-	"host": "https://www.7digital.local:3000",
+	"host": "https://localhost",
 	"selector": "body",
 	"viewports": {
 		"smartphone-portrait": [320, 480],
@@ -9,71 +9,17 @@
 		"desktop-standard": [1280, 1024]
 	},
 	"pages": {
-		"home": {
-			"path": "/"
+		"dashboard": {
+			"path": "/dashboard"
 		},
-		"artist": {
-			"path": "/artist/keane"
+		"thingswelove": {
+			"path": "/thingswelove"
 		},
-		"release": {
-			"path": "/artist/keane/release/perfect-symmetry-1"
+        "thingswelove_blog": {
+			"path": "/thingswelove/Test Blog"
 		},
-		"charts": {
-			"path": "/charts"
-		},
-		"search": {
-			"path": "/search?q=three-pages-of-results"
-		},
-		"search-release": {
-			"path": "/search/release?q=three-pages-of-results"
-		},
-		"search-artist": {
-			"path": "/search/artist?q=three-pages-of-results"
-		},
-		"search-track": {
-			"path": "/search/track?q=three-pages-of-results"
-		},
-		"genres": {
-			"path": "/genre"
-		},
-		"genre": {
-			"path": "/genre/pop"
-		},
-		"feature-interview": {
-			"path": "/features/VFuGfygAACcA-uY6/honeyblood",
-			"headers": {
-				"x-7d-prismic-ref": "VNol0CUAAM8At4D4"
-			}
-		},
-		"feature-best-of": {
-			"path": "/features/VFOr4ygAACcA6zaV/best-of-2014",
-			"headers": {
-				"x-7d-prismic-ref": "VNol0CUAAM8At4D4"
-			}
-		},
-		"feature-merch-list": {
-			"path": "/features/VGoRZCcAACgAWSXh/hi-res-flac",
-			"headers": {
-				"x-7d-prismic-ref": "VNol0CUAAM8At4D4"
-			}
-		},
-		"feature-ones-to-watch": {
-			"path": "/features/VJLvkigAACkA24Z2/ones-to-watch-2015",
-			"headers": {
-				"x-7d-prismic-ref": "VNol0CUAAM8At4D4"
-			}
-		},
-		"feature-awards-prize": {
-			"path": "/features/VL0ktiUAACYACBKu/mercury",
-			"headers": {
-				"x-7d-prismic-ref": "VNol0CUAAM8At4D4"
-			}
-		},
-		"feature-awards-award": {
-			"path": "/features/VNCyqicAAIBlcB0Z/brits",
-			"headers": {
-				"x-7d-prismic-ref": "VNol0CUAAM8At4D4"
-			}
+        "Products_Overview": {
+			"path": "/products/overview?fromblog=Test Blog"
 		}
 	}
 }
